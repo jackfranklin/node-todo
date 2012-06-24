@@ -1,9 +1,11 @@
 h1 new todo list
-form
+form(action="/save", method="post")
   p
     label Enter a new todo item
-    input(type='text',placeholder='new todo')
+    input(type='text',placeholder='new todo', name='todo-text')
+  p
+    input(type='submit', value='Save')
 ul
-each todo in todos
-  li #{todo.text}
+  each todo in todos
+    li #{todo.text}
 
